@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg,#c11313, #ced411);
+}
+
+.wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.container {
+    width: 70vmin;
+    height: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+}
+
+.tile {
+    cursor: pointer;
+    background: #ffffff;
+    height: 22vmin;
+    width: 22vmin;
+    border: none;
+    border-radius: 8px;
+    font-size: 13vmin;
+    color: #25ac57;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#restart {
+    cursor: pointer;
+    width: 22vmin;
+    font-size: 3vmin;
+    padding: 1em;
+    border-radius: 8px;
+    border: none;
+    position: relative;
+    margin: 1.5em auto 0 auto;
+    display: block;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bounce {
+    0% {
+transform: scale(1,1) translate(0px, 0px);
+}
+
+30%{
+transform: scale(1,0.9) translate(0px, 0px); 
+}
+
+75%{
+transform: scale(1,1) translate(0px, -25px); 
+}
+
+100% {
+transform: scale(1,1) translate(0px, 0px);
+}
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
