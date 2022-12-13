@@ -67,9 +67,11 @@ const winChecker = () => {
         if(el1 != '' && el2 != '' && el3 != '') {
             if(el1 == el2 && el2 == el3) {
                 winFun(pattern);
+                return true;
             }
         }
     }
+    return false;
 }
 
 tiles.forEach((element) => {
@@ -85,10 +87,9 @@ tiles.forEach((element) => {
         }
         element.style.cursor = "default";
         count += 1;
-        if(count == 9) {
+        if(!winChecker() && count == 9) {
             drawFun();
         }
-        winChecker();
     })
 })
 
